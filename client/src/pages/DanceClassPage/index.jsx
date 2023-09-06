@@ -25,7 +25,9 @@ const DanceClassPage = () => {
 
   useEffect(() => {
     const getDanceClasses = async (req, res) => {
-      const response = await axios.get('http://localhost:8000/danceclass');
+      const response = await axios.get(
+        'https://danceacademymern.onrender.com//danceclass'
+      );
       setDanceClasses(response.data);
     };
     getDanceClasses();

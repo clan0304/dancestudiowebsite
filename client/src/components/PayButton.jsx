@@ -6,7 +6,7 @@ const PayButton = ({ price }) => {
   const emerald = theme.palette.emerald.main;
   const handleCheckout = () => {
     axios
-      .post(`http://localhost:8000/create-checkout-session`, {
+      .post(`https://danceacademymern.onrender.com/create-checkout-session`, {
         price,
       })
       .then((res) => {
