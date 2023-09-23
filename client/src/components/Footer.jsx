@@ -7,9 +7,7 @@ const Footer = () => {
       width="100%"
       sx={{
         backgroundColor: theme.palette.emerald.dark,
-        position: 'sticky',
-
-        bottom: 0,
+       
       }}
     >
       <Box
