@@ -18,7 +18,7 @@ const AboutUsPage = () => {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh',
+        minHeight: '120vh',
         alignItems: 'center',
         mt: '2rem',
         rowGap: '4rem',

@@ -26,7 +26,7 @@ const DanceClassPage = () => {
   useEffect(() => {
     const getDanceClasses = async (req, res) => {
       const response = await axios.get(
-        'https://danceacademymern.onrender.com//danceclass'
+        'https://danceacademymern.onrender.com/danceclass'
       );
       setDanceClasses(response.data);
     };
@@ -130,7 +130,7 @@ const DanceClassPage = () => {
               <DanceClass danceClass={danceClass} key={danceClass._id} />
             ))}
         </Box>
-        <Footer style={{ position: 'sticky', bottom: 0 }} />
+        <Footer style={{ position: 'absolute', bottom: 0 }} />
       </Box>
     </Box>
   );

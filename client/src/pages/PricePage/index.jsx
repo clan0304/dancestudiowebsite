@@ -16,7 +16,7 @@ const PricePage = () => {
   useEffect(() => {
     const getPrice = async (req, res) => {
       const response = await axios.get(
-        'https://danceacademymern.onrender.com//price'
+        'https://danceacademymern.onrender.com/price'
       );
       setPrices(response.data);
     };

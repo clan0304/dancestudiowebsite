@@ -25,7 +25,7 @@ const Home = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:8000/danceClass/${id}`);
+    axios.delete(`http://localhost:8000/danceclass/${id}`);
     window.location.reload();
   };
 
