@@ -24,7 +24,7 @@ const Home = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:8000/danceClass/${id}`);
+    axios.delete(`https://danceacademymern.onrender.com/danceClass/${id}`);
     window.location.reload();
   };
 
@@ -57,18 +57,23 @@ const Home = () => {
   ];
 
   const handleCreateSubmit = async (values) => {
-    await axios.post('http://localhost:8000/price', values);
+    await axios.post('https://danceacademymern.onrender.com/price', values);
     window.location.reload();
     closeCreateModal();
   };
 
   const handleUpdateSubmit = async (values) => {
-    await axios.put(`http://localhost:8000/price/${selectedRow._id}`, values);
+    await axios.put(
+      `https://danceacademymern.onrender.com/price/${selectedRow._id}`,
+      values
+    );
     window.location.reload();
     handleClose();
   };
   const getPrice = async () => {
-    const response = await axios.get('http://localhost:8000/price');
+    const response = await axios.get(
+      'https://danceacademymern.onrender.com/price'
+    );
     setRows(response.data);
   };
 

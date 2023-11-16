@@ -17,7 +17,6 @@ const Navbar = () => {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
 
   const emerald = theme.palette.emerald.main;
-  const lightGrey = theme.palette.grey.light;
 
   return (
     <FlexBetween backgroundColor={emerald} padding="1rem 5%">
@@ -29,6 +28,7 @@ const Navbar = () => {
         sx={{
           '&:hover': {
             cursor: 'pointer',
+            opacity: 0.3,
           },
         }}
       >
@@ -76,6 +76,11 @@ const Navbar = () => {
       ) : (
         <IconButton
           onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
+          sx={{
+            '&:hover': {
+              cursor: 'pointer',
+            },
+          }}
         >
           <Menu />
         </IconButton>
@@ -88,13 +93,18 @@ const Navbar = () => {
           bottom="0"
           height="100%"
           zIndex="10"
-          maxWidth="400px"
+          maxWidth="600px"
           minWidth="200px"
-          backgroundColor={lightGrey}
+          backgroundColor={emerald}
         >
           <Box display="flex" justifyContent="flex-end" p="1rem">
             <IconButton
               onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
+              sx={{
+                '&:hover': {
+                  cursor: 'pointer',
+                },
+              }}
             >
               <Close />
             </IconButton>
@@ -109,21 +119,48 @@ const Navbar = () => {
             <Typography
               variant="h3"
               color="black"
-              onClick={() => navigate('/danceclass')}
+              onClick={() => {
+                navigate('/danceclass');
+                setIsMobileMenuToggled(!isMobileMenuToggled);
+              }}
+              sx={{
+                '&:hover': {
+                  cursor: 'pointer',
+                  opacity: 0.2,
+                },
+              }}
             >
               Dance Class
             </Typography>
             <Typography
               variant="h3"
               color="black"
-              onClick={() => navigate('/price')}
+              onClick={() => {
+                navigate('/price');
+                setIsMobileMenuToggled(!isMobileMenuToggled);
+              }}
+              sx={{
+                '&:hover': {
+                  cursor: 'pointer',
+                  opacity: 0.2,
+                },
+              }}
             >
               Price
             </Typography>
             <Typography
               variant="h3"
               color="black"
-              onClick={() => navigate('/aboutus')}
+              onClick={() => {
+                navigate('/aboutus');
+                setIsMobileMenuToggled(!isMobileMenuToggled);
+              }}
+              sx={{
+                '&:hover': {
+                  cursor: 'pointer',
+                  opacity: 0.2,
+                },
+              }}
             >
               About Us
             </Typography>

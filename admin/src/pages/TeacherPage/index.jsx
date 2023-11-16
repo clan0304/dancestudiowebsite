@@ -24,7 +24,7 @@ const TeacherPage = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:8000/teacher/${id}`);
+    axios.delete(`https://danceacademymern.onrender.com/teacher/${id}`);
     window.location.reload();
   };
 
@@ -58,14 +58,17 @@ const TeacherPage = () => {
   ];
 
   const handleCreateSubmit = async (values) => {
-    await axios.post('http://localhost:8000/teacher', values);
+    await axios.post('https://danceacademymern.onrender.com/teacher', values);
     window.location.reload();
     alert('Teacher is added!');
     closeCreateModal();
   };
 
   const handleUpdateSubmit = async (values) => {
-    await axios.put(`http://localhost:8000/teacher/${selectedRow._id}`, values);
+    await axios.put(
+      `https://danceacademymern.onrender.com/teacher/${selectedRow._id}`,
+      values
+    );
     window.location.reload();
     alert('Updated!');
     handleClose();
@@ -73,7 +76,9 @@ const TeacherPage = () => {
 
   useEffect(() => {
     const getTeacher = async () => {
-      const response = await axios.get('http://localhost:8000/teacher');
+      const response = await axios.get(
+        'https://danceacademymern.onrender.com/teacher'
+      );
       setRows(response.data);
     };
     getTeacher();

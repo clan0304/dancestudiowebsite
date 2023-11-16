@@ -25,7 +25,7 @@ const Home = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:8000/danceclass/${id}`);
+    axios.delete(`https://danceacademymern.onrender.com/danceclass/${id}`);
     window.location.reload();
   };
 
@@ -60,7 +60,10 @@ const Home = () => {
   ];
 
   const handleCreateSubmit = async (values) => {
-    await axios.post('http://localhost:8000/danceclass', values);
+    await axios.post(
+      'https://danceacademymern.onrender.com/danceclass',
+      values
+    );
     window.location.reload();
     alert('Class is created!');
     closeCreateModal();
@@ -68,7 +71,7 @@ const Home = () => {
 
   const handleUpdateSubmit = async (values) => {
     await axios.put(
-      `http://localhost:8000/danceclass/${selectedRow._id}`,
+      `https://danceacademymern.onrender.com/danceclass/${selectedRow._id}`,
       values
     );
     window.location.reload();
@@ -76,12 +79,16 @@ const Home = () => {
     handleClose();
   };
   const getDanceClass = async () => {
-    const response = await axios.get('http://localhost:8000/danceclass');
+    const response = await axios.get(
+      'https://danceacademymern.onrender.com/danceclass'
+    );
     setRows(response.data);
   };
 
   const getTeacher = async () => {
-    const response = await axios.get('http://localhost:8000/teacher');
+    const response = await axios.get(
+      'https://danceacademymern.onrender.com/teacher'
+    );
     setTeachers(response.data);
   };
 
