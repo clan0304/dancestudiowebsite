@@ -43,6 +43,7 @@ const Navbar = () => {
             sx={{
               '&:hover': {
                 cursor: 'pointer',
+                opacity: 0.2,
               },
             }}
           >
@@ -55,6 +56,7 @@ const Navbar = () => {
             sx={{
               '&:hover': {
                 cursor: 'pointer',
+                opacity: 0.2,
               },
             }}
           >
@@ -67,6 +69,7 @@ const Navbar = () => {
             sx={{
               '&:hover': {
                 cursor: 'pointer',
+                opacity: 0.2,
               },
             }}
           >
