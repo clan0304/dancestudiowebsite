@@ -23,7 +23,7 @@ const Navbar = () => {
       <Typography
         fontSize="clamp(1rem, 2rem, 2.5rem)"
         fontWeight="bold"
-        color="white"
+        color="#F7F7F2"
         onClick={() => navigate('/')}
         sx={{
           '&:hover': {
@@ -96,9 +96,9 @@ const Navbar = () => {
           bottom="0"
           height="100%"
           zIndex="10"
-          maxWidth="600px"
-          minWidth="200px"
-          backgroundColor={emerald}
+             maxWidth="600px"
+          minWidth="300px"
+          backgroundColor="#F7F7F2"
         >
           <Box display="flex" justifyContent="flex-end" p="1rem">
             <IconButton
@@ -120,8 +120,9 @@ const Navbar = () => {
             gap="2rem"
           >
             <Typography
-              variant="h3"
-              color="black"
+              variant="h2"
+             color={emerald}
+              fontWeight="bold"
               onClick={() => {
                 navigate('/danceclass');
                 setIsMobileMenuToggled(!isMobileMenuToggled);
@@ -136,8 +137,9 @@ const Navbar = () => {
               Dance Class
             </Typography>
             <Typography
-              variant="h3"
-              color="black"
+              variant="h2"
+              color={emerald}
+              fontWeight="bold"
               onClick={() => {
                 navigate('/price');
                 setIsMobileMenuToggled(!isMobileMenuToggled);
@@ -152,8 +154,9 @@ const Navbar = () => {
               Price
             </Typography>
             <Typography
-              variant="h3"
-              color="black"
+              variant="h2"
+              color={emerald}
+              fontWeight="bold"
               onClick={() => {
                 navigate('/aboutus');
                 setIsMobileMenuToggled(!isMobileMenuToggled);
